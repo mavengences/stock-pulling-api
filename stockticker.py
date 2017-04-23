@@ -25,8 +25,8 @@ def getprice(symbol):
 
 app = Flask(__name__)
 
-@app.route('/temperature', methods=['POST'])
-def temperature():
+@app.route('/stocks', methods=['POST'])
+def stocks():
     zip = request.form['ticker']
     r = requests.get("http://d.yimg.com/autoc.finance.yahoo.com/autoc?region=All&lang=en-us&query="+zip)
     json_object = r.json()
